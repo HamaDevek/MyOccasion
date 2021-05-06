@@ -16,7 +16,7 @@ class CreateWeekDaysTable extends Migration
     {
         Schema::create('week_days', function (Blueprint $table) {
             $table->bigIncrements('w_ID');
-            $table->string('w_days')->unique();
+            $table->string('w_days',10)->unique();
             $table->enum('w_days_enum', ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']);
             $table->timestamps();
         });

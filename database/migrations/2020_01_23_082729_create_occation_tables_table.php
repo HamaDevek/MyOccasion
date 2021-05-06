@@ -15,7 +15,7 @@ class CreateOccationTablesTable extends Migration
     {
         Schema::create('occation_tables', function (Blueprint $table) {
             $table->bigIncrements('oc_ID');
-            $table->string('oc_name')->unique();
+            $table->string('oc_name',100)->unique();
             $table->boolean('oc_state')->default(0);
             $table->timestamps();
         });

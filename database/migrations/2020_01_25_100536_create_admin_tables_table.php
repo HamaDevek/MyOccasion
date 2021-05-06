@@ -19,7 +19,7 @@ class CreateAdminTablesTable extends Migration
             $table->string('ad_first_name');
             $table->string('ad_middle_name');
             $table->string('ad_last_name');
-            $table->string('ad_username')->unique();
+            $table->string('ad_username',100)->unique();
             $table->string('ad_phone',17)->unique();
             $table->string('ad_password');
             $table->boolean('ad_state')->default(0);
